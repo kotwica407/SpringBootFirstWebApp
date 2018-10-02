@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xml:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja lista kontaktów</title>
+</head>
+<body>
+<h1 align="center">Moja lista kontaktów - Thymeleaf</h1>
+<table align="center" border="1" cellpadding="10">
+    <tr>
+        <th>Imię i nazwisko</th>
+        <th>Email</th>
+        <th>Kraj</th>
+    </tr>
+    <tr th:each="contact : ${contactList}">
+        <td th:text="${contact.name}">Imię i nazwisko</td>
+        <td th:text="${contact.email}">Email</td>
+        <td th:text="${contact.country}">Kraj</td>
+    </tr>
+</table>
+
+</body>
+</html>
